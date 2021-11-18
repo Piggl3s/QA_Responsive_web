@@ -12,7 +12,7 @@
     <div class="row">
         {{ office.id }}
         <form action="{% url 'office_info' %}">
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="office">
+            <select id="dropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="office">
                 <option selected>Select Office location</option>
                 {% for office in offices %}
                     <option value='{{ office.id }}'>{{ office.title }}</option>
@@ -23,5 +23,5 @@
     </div>
 
 </div>
-
 {% endblock %}
+
