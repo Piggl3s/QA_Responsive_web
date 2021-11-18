@@ -25,12 +25,3 @@
 </div>
 
 {% endblock %}
-
-<script>
-    $("select").on('change',function(){
-        if($(this).find('option:selected').text()=="Select Office location")
-            $("#btnSubmit").attr('disabled',true)
-        else
-            $("#btnSubmit").attr('disabled',false)
-     });
-</script>
