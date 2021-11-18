@@ -1,0 +1,36 @@
+{% extends 'office_info/base_template.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col" style="padding-top: 2%">
+            <img src="{% static 'office_info/logo.svg' %}" class="img-fluid mx-auto d-block mt-0">
+            <h3 class="text-center">Office Information</h3>
+        </div>
+    </div>
+    <div class="row">
+        {{ office.id }}
+        <form action="{% url 'office_info' %}">
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="office">
+                <option selected>Select Office location</option>
+                {% for office in offices %}
+                    <option value='{{ office.id }}'>{{ office.title }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+<script>
+    $("select").on('change',function(){
+        if($(this).find('option:selected').text()=="Select Office location")
+            $("#btnSubmit").attr('disabled',true)
+        else
+            $("#btnSubmit").attr('disabled',false)
+     });
+</script>
