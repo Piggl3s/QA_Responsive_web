@@ -1,6 +1,7 @@
 {% extends 'office_info/base_template.html' %}
 {% block content %}
-    {% load static %}
+<!-- Load static files -->
+{% load static %}
 
 <div class="container">
     <div class="row text-center" style="padding-top:5%">
@@ -10,15 +11,14 @@
     </div>
     <div class="row">
         <div class="col home_logo">
-        <img src="{% static 'office_info/logo.svg' %}" class="img-fluid mx-auto d-block">
+        <img src="{% static 'base_template/logo.svg' %}" class="img-fluid mx-auto d-block">
         </div>
     </div>
     <div class="row">
         <div class="col text-center">
-            <a href="{% url 'office_select' %}" class="btn btn-outline-secondary" role="button">Office Information</a>
+            <a href="{% url 'office_select' %}" class="btn btn-info" role="button">Office Information</a>
         </div>
     </div>
-
 </div>
 
 {% endblock %}

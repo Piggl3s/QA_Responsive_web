@@ -1,11 +1,12 @@
 {% extends 'office_info/base_template.html' %}
 {% block content %}
+<!-- Load static files -->
 {% load static %}
 
 <div class="container">
     <div class="row">
         <div class="col" style="padding-top: 2%">
-            <img src="{% static 'office_info/logo.svg' %}" class="img-fluid mx-auto d-block mt-0">
+            <img src="{% static 'base_template/logo.svg' %}" class="img-fluid mx-auto d-block mt-0">
             <h3 class="text-center">Office Information</h3>
         </div>
     </div>
@@ -18,10 +19,13 @@
                     <option value='{{ office.id }}'>{{ office.title }}</option>
                 {% endfor %}
             </select>
-            <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="btnSubmit" class="btn btn-info">Submit</button>
         </form>
     </div>
 
 </div>
+<!-- link to local static JS file -->
+<script src="{% static 'office_select/js/myscript.js' %}"></script>
+
 {% endblock %}
 

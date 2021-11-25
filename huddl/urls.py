@@ -21,9 +21,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home , name="home"),
-    path('offices/', views.offices , name="office_select"),
-    path('office_info/', views.office_info , name="office_info"),
+    path('', views.get_homepage_view , name="home"),
+    path('offices/', views.get_office_select_view , name="office_select"),
+    path('office_info/', views.get_office_information_view , name="office_info"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )

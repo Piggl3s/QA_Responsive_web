@@ -1,0 +1,34 @@
+body{
+    background-color: #bdf788 !important
+}
+
+.home_logo {
+  padding-top: 5%;
+}
+
+.social-icon {
+  color: #f341db;
+  opacity: 0.6;
+}
+
+.rotate-image {
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor:pointer;
+ }
+  
+ .rotate-image:hover {
+  opacity: 1;
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+  transform:rotate(360deg);
+ }
+
+ .card {
+   background-color:rgba(0, 0, 0, 0.1) !important;
+ }

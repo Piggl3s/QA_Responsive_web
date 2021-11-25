@@ -1,34 +1,46 @@
 {% extends 'office_info/base_template.html' %}
 {% block content %}
-    {% load static %}
+<!-- Load static files -->
+{% load static %}
 
-
-<div class="container">
-    <div class="row text-center" >
-        <div class="card" >
-            <h5 class="card-header">{{ office.title }} Office</h5>
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <img class="card-img-top" src="{{ office.image.url }}" alt="Card image cap">
-                <p class="card-text">
-                    <h6>Address</h6>
-                    {{ office.address_line_1 }}<br>
-                    {{ office.address_line_2 }}<br>
-                    {{ office.address_line_3 }}<br>
-                    {{ office.postal_zip_code }}<br>
-                    Phone : {{ office.phone }} 
-                </p>
-                <p class="card-text"><small class="text-muted">
-                    {{ office.weather }}
-                    {% for k in office.weather %}
-                    {{ k }}
-                {% endfor %}
-                </p>
-                <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+<div class="container" style="padding-top:5%">
+      <div class="card text-center" style="background-color:rgba(0, 0, 0, 0.1)">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body" >
+          <h5 class="card-title">{{ office.title }} Office</h5>
+          <div class="card-text">
+            <h6> {{ office.address_line_1 }} </h6>
+            <h6> {{ office.address_line_2 }} </h6>
+            <h6> {{ office.address_line_3 }} </h6>
+            <h6> {{ office.address_line_4 }} </h6>
+            <h6> {{ office.postal_zip_code }} </h6>
+            <br>
+            <h6>Phone : {{ office.phone }}</h6>
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <img class="img-fluid rounded mx-auto " alt="Responsive image" src="{{ office.image.url }}">
             </div>
-            </div>  
-    </div>
+            <div class="col">
+                <h6>Local Weather ({{ office.title }})</h6>
+                <img src="{{ office.weather.weather_icon }}">
+                <p>{{ office.weather.todays_weather }}</p>
+            </div>
+            <div class="col">
+                <h6>Local Time ({{ office.country }})</h6>
+                <canvas id="canvas" width="200" height="200">
+                </canvas>
+            </div>
+          </div>
+          <br>
+          <a href="{% url 'home' %}" class="btn btn-info">Home</a>
+        </div>
+      </div>
 </div>
+<!-- link to local static JS file -->
+<script src="{% static 'office_information/js/myscript.js' %}"></script>
 
 {% endblock %}
 
