@@ -3,7 +3,16 @@
 QA apprenticeship Responsive web project is built using the Django framework.
 the main purpose was to create a responsive website for my QA apprenticeship Portfolio.
 
-I Chose to create an Office information Page, with the intention of turning this into an Team Hub type page Moving forward. 
+I Chose to create an Office information Page, with the intention of turning this into an Team Hub type page Moving forward.
+
+Admin can add in Offices, and information 
+i.e 
+Address 
+Phone Number
+Image
+openweathermap id
+
+The HTML is then updated based on the stored Database office information.
 
 ## Installation
 
