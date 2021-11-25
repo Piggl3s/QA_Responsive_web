@@ -7,10 +7,10 @@ I Chose to create an Office information Page, with the intention of turning this
 
 Admin can add in Offices, and information 
 i.e 
-Address 
-Phone Number
-Image
-openweathermap id
+1. Address 
+2. Phone Number
+3. Image
+4. openweathermap id
 
 The HTML is then updated based on the stored Database office information.
 
