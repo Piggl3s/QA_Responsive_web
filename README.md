@@ -12,7 +12,7 @@ i.e
 3. Image
 4. openweathermap id
 
-The HTML is then updated based on the stored Database office information.
+The HTML is then updated based on Database information.
 
 ## Installation
 
