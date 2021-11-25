@@ -7,7 +7,7 @@ I Chose to create an Office information Page, with the intention of turning this
 
 ## Installation
 
-Use the Python package manager to install Django.
+Use the Python package manager to install Django & Pillow.
 
 ```bash
 pip install Django
