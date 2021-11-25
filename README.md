@@ -11,6 +11,7 @@ Use the Python package manager to install Django.
 
 ```bash
 pip install Django
+pip install pillow
 ```
 
 ## To use the local Weather API
